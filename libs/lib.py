@@ -45,7 +45,6 @@ def getinfo(authn, name, number):
 
     try:
         url=authn.GetUser(screen_name = name).GetProfileImageUrl()
-        url=url[:-12]+'.jpeg'
     except:
         url="/static/cat_eating_bowl.jpg"
 
