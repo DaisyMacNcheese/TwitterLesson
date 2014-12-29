@@ -2,3 +2,4 @@ venv/*
 notes/*
 creds.yaml
 
+.elasticbeanstalk/
