@@ -1,5 +1,6 @@
 import twitter
 import yaml
+import boto
 
 
 def get_authenticated_api():
@@ -13,8 +14,12 @@ def get_authenticated_api():
        
        returns the authentication needed by python-twitter
     '''
-    with open('creds.yaml', 'r') as f:
-        doc = yaml.load(f)
+
+    conn=boto.connect_s3()
+    bucket=conn.get_bucket('myfirstbuckettestcaggabe')
+    key=bucket.get_key('creds_example.yaml')
+    file=key.read()
+    doc = yaml.load(file)
 
     api = twitter.Api(consumer_key       = doc['consumer_key'],
                       consumer_secret    = doc['consumer_secret'],
