@@ -27,7 +27,6 @@ def get_authenticated_api():
                       access_token_key   = doc['access_token_key'],
                       access_token_secret= doc['access_token_secret'])
     print '[DEBUG-ROB] doc[consumer_key] ' + doc['consumer_key']
-    print '[DEBUG-ROB] consumer_key fetched ' + consumer_key
 
     return api
 
