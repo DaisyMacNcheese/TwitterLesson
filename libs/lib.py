@@ -17,7 +17,7 @@ def get_authenticated_api():
 
     conn=boto.connect_s3()
     bucket=conn.get_bucket('myfirstbuckettestcaggabe')
-    key=bucket.get_key('creds_example.yaml')
+    key=bucket.get_key('creds.yaml')
     file=key.read()
     doc = yaml.load(file)
     print '[DEBUG-ROB] pre api lols'
