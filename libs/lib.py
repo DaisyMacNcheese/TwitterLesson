@@ -20,7 +20,7 @@ def get_authenticated_api():
     key=bucket.get_key('creds_example.yaml')
     file=key.read()
     doc = yaml.load(file)
-    print '[DEBUG-ROB] pre api'
+    print '[DEBUG-ROB] pre api lols'
 
     api = twitter.Api(consumer_key       = doc['consumer_key'],
                       consumer_secret    = doc['consumer_secret'],
